@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> "🏆 فرصة لتصبح المدير الجديد!" </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* إعدادات عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        :root {
+            /* الثيم الفاتح (الافتراضي) */
+            --primary-color: #3498db;
+            --primary-dark: #2980b9;
+            --secondary-color: #2ecc71;
+            --secondary-dark: #27ae60;
+            --danger-color: #e74c3c;
+            --danger-dark: #c0392b;
+            --warning-color: #f39c12;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --border-color: #ddd;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --progress-color: #3498db;
+            --progress-bg: #ecf0f1;
+        }
+        
+        .dark-theme {
+            /* الثيم الغامق */
+            --primary-color: #3498db;
+            --primary-dark: #2980b9;
+            --secondary-color: #2ecc71;
+            --secondary-dark: #27ae60;
+            --danger-color: #e74c3c;
+            --danger-dark: #c0392b;
+            --warning-color: #f39c12;
+            --text-color: #ecf0f1;
+            --text-light: #bdc3c7;
+            --bg-color: #1a1a2e;
+            --card-bg: #16213e;
+            --border-color: #2d4059;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --progress-color: #3498db;
+            --progress-bg: #2d4059;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* شريط التحكم العلوي */
+        .top-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--card-bg);
+            padding: 8px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+        
+        .theme-icon {
+            font-size: 1.2rem;
+        }
+        
+        .theme-text {
+            font-weight: 500;
+        }
+        
+        /* النقاط الثلاثة في الأعلى */
+        .menu-dots {
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 30px;
+            background: var(--card-bg);
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        /* حالة الاتصال */
+        .connection-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            background: var(--card-bg);
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+        
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #2ecc71;
+            animation: pulse 2s infinite;
+        }
+        
+        .status-indicator.offline {
+            background-color: #e74c3c;
+        }
+        
+        /* تصميم الواجهة الأولى */
+        #welcome-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .welcome-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .welcome-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        
+        .start-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        .start-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+        }
+        
+        .copyright {
+            margin-top: 50px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            width: 100%;
+        }
+        
+        /* شريط التقدم متعدد المراحل */
+        .multi-step-progress {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .multi-step-progress::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--progress-bg);
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+        
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+            flex: 1;
+        }
+        
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--progress-bg);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border: 3px solid var(--progress-bg);
+            transition: all 0.3s ease;
+        }
+        
+        .step-circle.active {
+            background-color: var(--progress-color);
+            color: white;
+            border-color: var(--progress-color);
+            box-shadow: 0 0 0 5px rgba(52, 152, 219, 0.2);
+        }
+        
+        .step-circle.completed {
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+        
+        .step-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .step-label.active {
+            color: var(--progress-color);
+            font-weight: 600;
+        }
+        
+        .step-label.completed {
+            color: var(--secondary-color);
+        }
+        
+        /* تصميم الواجهة الثانية */
+        #registration-screen {
+            display: none;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        .screen-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            text-align: center;
+        }
+        
+        .form-step {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        
+        .form-group {
+            flex: 1 1 300px;
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border 0.3s;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        
+        input:focus, select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .checkbox-group input {
+            width: auto;
+            margin-left: 10px;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+        }
+        
+        .conditional-field {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .next-btn {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .next-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .prev-btn {
+            background-color: var(--warning-color);
+            color: white;
+        }
+        
+        .prev-btn:hover {
+            background-color: #e67e22;
+        }
+        
+        .submit-btn {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--secondary-dark);
+        }
+        
+        .back-btn {
+            background-color: var(--danger-color);
+            color: white;
+        }
+        
+        .back-btn:hover {
+            background-color: var(--danger-dark);
+        }
+        
+        /* تصميم رسالة النجاح */
+        #success-screen {
+            display: none;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .success-icon {
+            font-size: 5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            animation: bounce 1s ease infinite alternate;
+        }
+        
+        .success-title {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .success-message {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        /* الرسائل التحذيرية */
+        .warning {
+            color: var(--danger-color);
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .required {
+            color: var(--danger-color);
+        }
+        
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .welcome-title {
+                font-size: 2rem;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .form-group {
+                flex: 1 1 100%;
+            }
+            
+            .form-navigation {
+                flex-direction: column;
+            }
+            
+            .multi-step-progress {
+                margin-bottom: 20px;
+            }
+            
+            .step-label {
+                font-size: 0.7rem;
+            }
+            
+            .top-controls {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            #registration-screen, #success-screen {
+                padding: 20px;
+            }
+        }
+        
+        /* الرسوم المتحركة */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* تحسين شريط التقدم */
+        .progress-connector {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            height: 4px;
+            background-color: var(--progress-color);
+            z-index: 1;
+            transform: translateY(-50%);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        /* واجهة التحكم */
+        #control-screen {
+            display: none;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        .password-form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        .password-input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        
+        .password-input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .error-message {
+            color: var(--danger-color);
+            text-align: center;
+            margin-bottom: 15px;
+            display: none;
+        }
+        
+        /* واجهة عرض التسجيلات */
+        #records-screen {
+            display: none;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        .records-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            text-align: center;
+        }
+        
+        .records-container {
+            max-height: 500px;
+            overflow-y: auto;
+            margin-bottom: 30px;
+        }
+        
+        .record-card {
+            background-color: var(--bg-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .record-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .record-name {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .record-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .record-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .record-item {
+            margin-bottom: 8px;
+        }
+        
+        .record-label {
+            font-weight: 600;
+            color: var(--text-color);
+            display: inline-block;
+            width: 120px;
+        }
+        
+        .record-value {
+            color: var(--text-light);
+        }
+        
+        .no-records {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
+            font-size: 1.2rem;
+        }
+        
+        /* زر العودة */
+        .back-home-btn {
+            margin-top: 20px;
+            background-color: var(--warning-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .back-home-btn:hover {
+            background-color: #e67e22;
+        }
+        
+        /* مؤشر التحميل */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loader {
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- شريط التحكم العلوي -->
+        <div class="top-controls">
+            <!-- النقاط الثلاثة -->
+            <div class="menu-dots" id="menu-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            
+            <!-- حالة الاتصال -->
+            <div class="connection-status" id="connection-status">
+                <div class="status-indicator" id="status-indicator"></div>
+                <span id="status-text">جاري الاتصال...</span>
+            </div>
+            
+            <!-- تبديل الثيم -->
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon theme-icon" id="theme-icon"></i>
+                <span class="theme-text" id="theme-text">الوضع الليلي</span>
+            </div>
+        </div>
+        
+        <!-- الواجهة الترحيبية -->
+        <div id="welcome-screen">
+            <div class="logo">
+                <i class="fas fa-user-check"></i>
+            </div>
+            <h1 class="welcome-title">"🏆 فرصة لتصبح المدير الجديد!"</h1>
+            <p class="welcome-subtitle">
+📢 بما أن المزحات الإفراطية من المدير لطفي عبد الوهاب  أصبحت كثيرة، نوفر لكم الآن نظام تسجيل إلكتروني لاختيار المدير الجديد . وسيتم اختيار المدير القادم عن طريق القرعة… فمن يدري، ربما تكون/ي الفائز/ة! 🏆📝✨            </p>
+            <button class="start-btn" id="start-button">
+                <i class="fas fa-share-alt"></i> ابدأ عملية التسجيل
+            </button>
+            <div class="copyright">
+                © 2025 نظام التسجيل الإلكتروني المتقدم. جميع الحقوق محفوظة.
+            </div>
+        </div>
+        
+        <!-- واجهة التسجيل -->
+        <div id="registration-screen">
+            <!-- شريط التقدم متعدد المراحل -->
+            <div class="multi-step-progress" id="multi-step-progress">
+                <div class="progress-connector" id="progress-connector"></div>
+                <div class="progress-step" data-step="1">
+                    <div class="step-circle active" id="step-circle-1">1</div>
+                    <div class="step-label active" id="step-label-1">المعلومات الأساسية</div>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-circle" id="step-circle-2">2</div>
+                    <div class="step-label" id="step-label-2">المعلومات الشخصية</div>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-circle" id="step-circle-3">3</div>
+                    <div class="step-label" id="step-label-3">المعلومات الإضافية</div>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-circle" id="step-circle-4">4</div>
+                    <div class="step-label" id="step-label-4">تأكيد التسجيل</div>
+                </div>
+            </div>
+            
+            <h2 class="screen-title" id="step-title">المعلومات الأساسية</h2>
+            
+            <form id="registration-form">
+                <!-- الخطوة 1: المعلومات الأساسية -->
+                <div class="form-step active" id="step-1">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">الاسم <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" placeholder="أدخل اسمك الأول">
+                            <div class="warning" id="firstName-warning">الاسم مطلوب</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">اللقب <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" placeholder="أدخل لقبك">
+                            <div class="warning" id="lastName-warning">اللقب مطلوب</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="birthDate">تاريخ الميلاد <span class="required">*</span></label>
+                            <input type="date" id="birthDate" name="birthDate">
+                            <div class="warning" id="birthDate-warning">تاريخ الميلاد مطلوب</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">العمر <span class="required">*</span></label>
+                            <input type="number" id="age" name="age" min="1" max="120" placeholder="أدخل عمرك">
+                            <div class="warning" id="age-warning">العمر مطلوب (يجب أن يكون بين 1 و 120)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn back-btn" id="back-button">
+                            <i class="fas fa-arrow-right"></i> العودة للرئيسية
+                        </button>
+                        <button type="button" class="btn next-btn" id="next-step-1">
+                            التالي <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- الخطوة 2: المعلومات الشخصية -->
+                <div class="form-step" id="step-2">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="profession">المهنة <span class="required">*</span></label>
+                            <input type="text" id="profession" name="profession" placeholder="أدخل مهنتك">
+                            <div class="warning" id="profession-warning">المهنة مطلوبة</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="أدخل رقم الهاتف">
+                            <div class="warning" id="phone-warning">رقم الهاتف مطلوب</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني">
+                            <div class="warning" id="email-warning">البريد الإلكتروني مطلوب وبصيغة صحيحة</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nationalId">رقم التعريف الوطني <span class="required">*</span></label>
+                            <input type="text" id="nationalId" name="nationalId" placeholder="أدخل رقم التعريف الوطني">
+                            <div class="warning" id="nationalId-warning">رقم التعريف الوطني مطلوب</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn prev-btn" id="prev-step-2">
+                            <i class="fas fa-arrow-right"></i> السابق
+                        </button>
+                        <button type="button" class="btn next-btn" id="next-step-2">
+                            التالي <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- الخطوة 3: المعلومات الإضافية -->
+                <div class="form-step" id="step-3">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fatherName">اسم الأب <span class="required">*</span></label>
+                            <input type="text" id="fatherName" name="fatherName" placeholder="أدخل اسم الأب">
+                            <div class="warning" id="fatherName-warning">اسم الأب مطلوب</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="motherName">اسم الأم <span class="required">*</span></label>
+                            <input type="text" id="motherName" name="motherName" placeholder="أدخل اسم الأم">
+                            <div class="warning" id="motherName-warning">اسم الأم مطلوب</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="isMarried" name="isMarried">
+                                <label for="isMarried">هل أنت متزوج؟</label>
+                            </div>
+                            
+                            <div class="conditional-field" id="children-field">
+                                <label for="childrenCount">عدد الأطفال</label>
+                                <input type="number" id="childrenCount" name="childrenCount" min="0" placeholder="أدخل عدد الأطفال">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn prev-btn" id="prev-step-3">
+                            <i class="fas fa-arrow-right"></i> السابق
+                        </button>
+                        <button type="button" class="btn next-btn" id="next-step-3">
+                            التالي <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- الخطوة 4: تأكيد التسجيل -->
+                <div class="form-step" id="step-4">
+                    <div class="confirmation-box">
+                        <h3 style="margin-bottom: 30px; color: var(--primary-color); text-align: center; font-size: 1.5rem;">
+                            هل تريد تأكيد التسجيل؟
+                        </h3>
+                        
+                        <div style="background-color: var(--bg-color); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+                            <p style="text-align: center; color: var(--text-color); line-height: 1.6;">
+                                سيتم حفظ جميع معلوماتك في قاعدة البيانات السحابية وسنتواصل معك في أقرب وقت.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn prev-btn" id="prev-step-4">
+                            <i class="fas fa-arrow-right"></i> السابق
+                        </button>
+                        <button type="submit" class="btn submit-btn">
+                            <i class="fas fa-user-check"></i> نعم، تأكيد التسجيل
+                        </button>
+                    </div>
+                </div>
+            </form>
+            
+            <!-- زر العودة للرئيسية -->
+            <button class="back-home-btn" id="back-home-from-registration">
+                <i class="fas fa-home"></i> العودة للرئيسية
+            </button>
+        </div>
+        
+        <!-- واجهة النجاح -->
+        <div id="success-screen">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="success-title">تم التسجيل بنجاح!</h2>
+            <p class="success-message">
+                شكرًا لك على إكمال عملية التسجيل بنجاح.
+                <br><br>
+                <strong>تم حفظ بياناتك في السحابة الإلكترونية بنجاح.</strong>
+                <br>
+                <strong>سنقوم بالاتصال بك في أقرب وقت.</strong>
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 20px;">
+                <button class="btn submit-btn" id="new-registration">
+                    <i class="fas fa-plus"></i> تسجيل جديد
+                </button>
+                <button class="btn next-btn" id="back-to-home">
+                    <i class="fas fa-home"></i> العودة للرئيسية
+                </button>
+            </div>
+            
+            <!-- زر العودة للرئيسية -->
+            <button class="back-home-btn" id="back-home-from-success">
+                <i class="fas fa-home"></i> العودة للرئيسية
+            </button>
+        </div>
+        
+        <!-- واجهة التحكم (كلمة المرور) -->
+        <div id="control-screen">
+            <h2 class="screen-title">لوحة التحكم</h2>
+            
+            <div class="password-form">
+                <p style="text-align: center; margin-bottom: 20px; color: var(--text-color);">
+                    الرجاء إدخال كلمة المرور للوصول إلى لوحة التحكم
+                </p>
+                
+                <input type="password" class="password-input" id="password-input" placeholder="أدخل كلمة المرور">
+                
+                <div class="error-message" id="password-error">
+                    كلمة المرور غير صحيحة. الرجاء المحاولة مرة أخرى.
+                </div>
+                
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <button class="btn back-btn" id="back-from-control">
+                        <i class="fas fa-arrow-right"></i> العودة
+                    </button>
+                    <button class="btn submit-btn" id="submit-password">
+                        <i class="fas fa-unlock"></i> دخول
+                    </button>
+                </div>
+            </div>
+            
+            <!-- زر العودة للرئيسية -->
+            <button class="back-home-btn" id="back-home-from-control">
+                <i class="fas fa-home"></i> العودة للرئيسية
+            </button>
+        </div>
+        
+        <!-- واجهة عرض التسجيلات -->
+        <div id="records-screen">
+            <h2 class="records-title">سجل التسجيلات - أونلاين</h2>
+            
+            <div class="loading" id="loading-records">
+                <div class="loader"></div>
+                <p>جاري تحميل التسجيلات من قاعدة البيانات...</p>
+            </div>
+            
+            <div class="records-container" id="records-container">
+                <!-- سيتم عرض التسجيلات هنا ديناميكيًا -->
+            </div>
+            
+            <!-- زر العودة -->
+            <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 20px;">
+                <button class="btn back-btn" id="back-from-records">
+                    <i class="fas fa-arrow-right"></i> العودة للتحكم
+                </button>
+                <button class="btn next-btn" id="refresh-records">
+                    <i class="fas fa-sync-alt"></i> تحديث
+                </button>
+            </div>
+            
+            <!-- زر العودة للرئيسية -->
+            <button class="back-home-btn" id="back-home-from-records">
+                <i class="fas fa-home"></i> العودة للرئيسية
+            </button>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <script>
+        // **********************************************
+        // كود تهيئة Firebase
+        // **********************************************
+        const firebaseConfig = {
+            apiKey: "AIzaSyBidR3LH-Yd8P2l0x-enMbPoaAWXLc8HkY",
+            authDomain: "news-f3f5f.firebaseapp.com",
+            projectId: "news-f3f5f",
+            storageBucket: "news-f3f5f.firebasestorage.app",
+            messagingSenderId: "65555743080",
+            appId: "1:65555743080:web:7dc63389464c5ae93416dd",
+            measurementId: "G-S87EQYXE6C"
+        };
+        
+        // تهيئة Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        // تهيئة Firestore
+        const db = firebase.firestore();
+        
+        // **********************************************
+        // كود JavaScript الرئيسي المعدل لاستخدام Firebase
+        // **********************************************
+        
+        // عناصر DOM الرئيسية
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const registrationScreen = document.getElementById('registration-screen');
+        const successScreen = document.getElementById('success-screen');
+        const controlScreen = document.getElementById('control-screen');
+        const recordsScreen = document.getElementById('records-screen');
+        
+        // عناصر حالة الاتصال
+        const connectionStatus = document.getElementById('connection-status');
+        const statusIndicator = document.getElementById('status-indicator');
+        const statusText = document.getElementById('status-text');
+        
+        // عناصر التحكم
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+        const menuDots = document.getElementById('menu-dots');
+        
+        // شريط التقدم متعدد المراحل
+        const progressSteps = document.querySelectorAll('.progress-step');
+        const stepCircles = document.querySelectorAll('.step-circle');
+        const stepLabels = document.querySelectorAll('.step-label');
+        const progressConnector = document.getElementById('progress-connector');
+        const stepTitle = document.getElementById('step-title');
+        
+        // النماذج والخطوات
+        const formSteps = document.querySelectorAll('.form-step');
+        let currentStep = 1;
+        
+        // جميع حقول الإدخال
+        const inputFields = document.querySelectorAll('input, select');
+        
+        // الأزرار الرئيسية
+        const startButton = document.getElementById('start-button');
+        const backButton = document.getElementById('back-button');
+        const newRegistrationButton = document.getElementById('new-registration');
+        const backToHomeButton = document.getElementById('back-to-home');
+        
+        // زر الانتقال بين الخطوات
+        const nextStepButtons = {
+            step1: document.getElementById('next-step-1'),
+            step2: document.getElementById('next-step-2'),
+            step3: document.getElementById('next-step-3')
+        };
+        
+        const prevStepButtons = {
+            step2: document.getElementById('prev-step-2'),
+            step3: document.getElementById('prev-step-3'),
+            step4: document.getElementById('prev-step-4')
+        };
+        
+        // أزرار العودة
+        const backHomeButtons = {
+            fromRegistration: document.getElementById('back-home-from-registration'),
+            fromSuccess: document.getElementById('back-home-from-success'),
+            fromControl: document.getElementById('back-home-from-control'),
+            fromRecords: document.getElementById('back-home-from-records')
+        };
+        
+        // عناصر التحكم
+        const passwordInput = document.getElementById('password-input');
+        const passwordError = document.getElementById('password-error');
+        const submitPasswordButton = document.getElementById('submit-password');
+        const backFromControlButton = document.getElementById('back-from-control');
+        const backFromRecordsButton = document.getElementById('back-from-records');
+        const refreshRecordsButton = document.getElementById('refresh-records');
+        
+        // مؤشر التحميل
+        const loadingRecords = document.getElementById('loading-records');
+        
+        // كلمة المرور للتحكم
+        const CONTROL_PASSWORD = "ghedir38";
+        
+        // تهيئة الموقع
+        window.addEventListener('DOMContentLoaded', () => {
+            // تحميل الإعدادات المحفوظة
+            loadSavedSettings();
+            
+            // تحديث شريط التقدم
+            updateProgressBar();
+            
+            // تحديث حالة الزواج
+            toggleChildrenField();
+            
+            // إضافة مستمعي الأحداث
+            setupEventListeners();
+            
+            // مراقبة حالة اتصال Firebase
+            monitorConnectionStatus();
+        });
+        
+        // مراقبة حالة اتصال Firebase
+        function monitorConnectionStatus() {
+            // مراقبة حالة الاتصال
+            db.enableNetwork().then(() => {
+                updateConnectionStatus(true);
+            }).catch((error) => {
+                updateConnectionStatus(false);
+                console.error("خطأ في الاتصال بقاعدة البيانات:", error);
+            });
+            
+            // مراقبة تغييرات حالة الاتصال في الوقت الحقيقي
+            db.collection('registrations').onSnapshot(
+                (snapshot) => {
+                    updateConnectionStatus(true);
+                },
+                (error) => {
+                    updateConnectionStatus(false);
+                    console.error("خطأ في مراقبة قاعدة البيانات:", error);
+                }
+            );
+        }
+        
+        // تحديث حالة الاتصال
+        function updateConnectionStatus(isConnected) {
+            if (isConnected) {
+                statusIndicator.className = 'status-indicator';
+                statusText.textContent = 'متصل ';
+                connectionStatus.style.color = '#2ecc71';
+            } else {
+                statusIndicator.className = 'status-indicator offline';
+                statusText.textContent = 'غير متصل';
+                connectionStatus.style.color = '#e74c3c';
+            }
+        }
+        
+        // إعداد مستمعي الأحداث
+        function setupEventListeners() {
+            // تبديل الثيم
+            themeToggle.addEventListener('click', toggleTheme);
+            
+            // النقاط الثلاثة للتحكم
+            menuDots.addEventListener('click', openControlPanel);
+            
+            // بدء التسجيل
+            startButton.addEventListener('click', startRegistration);
+            
+            // العودة للرئيسية
+            backButton.addEventListener('click', goBackToHome);
+            backToHomeButton.addEventListener('click', goBackToHome);
+            
+            // تسجيل جديد
+            newRegistrationButton.addEventListener('click', startNewRegistration);
+            
+            // الانتقال بين الخطوات
+            nextStepButtons.step1.addEventListener('click', () => goToStep(2));
+            nextStepButtons.step2.addEventListener('click', () => goToStep(3));
+            nextStepButtons.step3.addEventListener('click', () => goToStep(4));
+            
+            prevStepButtons.step2.addEventListener('click', () => goToStep(1));
+            prevStepButtons.step3.addEventListener('click', () => goToStep(2));
+            prevStepButtons.step4.addEventListener('click', () => goToStep(3));
+            
+            // حقل الزواج
+            document.getElementById('isMarried').addEventListener('change', toggleChildrenField);
+            
+            // تقديم النموذج
+            document.getElementById('registration-form').addEventListener('submit', submitForm);
+            
+            // أزرار العودة للرئيسية
+            backHomeButtons.fromRegistration.addEventListener('click', goBackToHome);
+            backHomeButtons.fromSuccess.addEventListener('click', goBackToHome);
+            backHomeButtons.fromControl.addEventListener('click', goBackToHome);
+            backHomeButtons.fromRecords.addEventListener('click', goBackToHome);
+            
+            // لوحة التحكم
+            submitPasswordButton.addEventListener('click', checkPassword);
+            passwordInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    checkPassword();
+                }
+            });
+            
+            backFromControlButton.addEventListener('click', () => {
+                controlScreen.style.display = 'none';
+                welcomeScreen.style.display = 'flex';
+                passwordInput.value = '';
+                passwordError.style.display = 'none';
+            });
+            
+            // سجل التسجيلات
+            backFromRecordsButton.addEventListener('click', () => {
+                recordsScreen.style.display = 'none';
+                controlScreen.style.display = 'block';
+                passwordInput.value = '';
+            });
+            
+            refreshRecordsButton.addEventListener('click', loadAllRecordsFromFirebase);
+        }
+        
+        // تبديل الثيم (فاتح/غامق)
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            
+            // تحديث الأيقونة والنص
+            if (document.body.classList.contains('dark-theme')) {
+                themeIcon.className = 'fas fa-sun theme-icon';
+                themeText.textContent = 'الوضع النهاري';
+            } else {
+                themeIcon.className = 'fas fa-moon theme-icon';
+                themeText.textContent = 'الوضع الليلي';
+            }
+            
+            // حفظ الإعداد
+            saveSettings();
+        }
+        
+        // فتح لوحة التحكم
+        function openControlPanel() {
+            welcomeScreen.style.display = 'none';
+            registrationScreen.style.display = 'none';
+            successScreen.style.display = 'none';
+            recordsScreen.style.display = 'none';
+            controlScreen.style.display = 'block';
+            passwordInput.value = '';
+            passwordError.style.display = 'none';
+        }
+        
+        // التحقق من كلمة المرور
+        function checkPassword() {
+            const password = passwordInput.value.trim();
+            
+            if (password === CONTROL_PASSWORD) {
+                // كلمة المرور صحيحة
+                controlScreen.style.display = 'none';
+                recordsScreen.style.display = 'block';
+                loadAllRecordsFromFirebase();
+                passwordError.style.display = 'none';
+            } else {
+                // كلمة المرور خاطئة
+                passwordError.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        }
+        
+        // تحميل جميع التسجيلات من Firebase
+        function loadAllRecordsFromFirebase() {
+            const recordsContainer = document.getElementById('records-container');
+            
+            // إظهار مؤشر التحميل
+            loadingRecords.style.display = 'block';
+            recordsContainer.innerHTML = '';
+            
+            // استبدال localStorage بـ Firebase Firestore
+            db.collection('registrations').orderBy('timestamp', 'desc').get()
+                .then((querySnapshot) => {
+                    // إخفاء مؤشر التحميل
+                    loadingRecords.style.display = 'none';
+                    
+                    if (querySnapshot.empty) {
+                        recordsContainer.innerHTML = `
+                            <div class="no-records">
+                                <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 20px; color: var(--text-light);"></i>
+                                <p>لا توجد تسجيلات حتى الآن</p>
+                            </div>
+                        `;
+                        return;
+                    }
+                    
+                    // عرض التسجيلات
+                    let recordsHTML = '';
+                    
+                    querySnapshot.forEach((doc) => {
+                        const record = doc.data();
+                        const date = record.timestamp ? new Date(record.timestamp.seconds * 1000).toLocaleString('ar-SA') : 'غير محدد';
+                        const fullName = `${record.firstName || ''} ${record.lastName || ''}`.trim() || 'غير معروف';
+                        const age = record.age || 'غير محدد';
+                        const birthDate = record.birthDate || 'غير محدد';
+                        const profession = record.profession || 'غير محدد';
+                        const phone = record.phone || 'غير محدد';
+                        const email = record.email || 'غير محدد';
+                        const nationalId = record.nationalId || 'غير محدد';
+                        const fatherName = record.fatherName || 'غير محدد';
+                        const motherName = record.motherName || 'غير محدد';
+                        const isMarried = record.isMarried === true || record.isMarried === 'true';
+                        const childrenCount = record.childrenCount || '0';
+                        
+                        recordsHTML += `
+                            <div class="record-card">
+                                <div class="record-header">
+                                    <div class="record-name">${fullName}</div>
+                                    <div class="record-date">${date}</div>
+                                </div>
+                                <div class="record-details">
+                                    <div class="record-item">
+                                        <span class="record-label">العمر:</span>
+                                        <span class="record-value">${age} سنة</span>
+                                    </div>
+                                    <div class="record-item">
+                                        <span class="record-label">تاريخ الميلاد:</span>
+                                        <span class="record-value">${birthDate}</span>
+                                    </div>
+                                    <div class="record-item">
+                                        <span class="record-label">المهنة:</span>
+                                        <span class="record-value">${profession}</span>
+                                    </div>
+                                    <div class="record-item">
+                                        <span class="record-label">رقم الهاتف:</span>
+                                        <span class="record-value">${phone}</span>
+                                    </div>
+                                    <div class="record-item">
+                                        <span class="record-label">البريد الإلكتروني:</span>
+                                        <span class="record-value">${email}</span>
+                                    </div>
+                                    <div class="record-item">
+                                        <span class="record-label">رقم التعريف:</span>
+                                        <span class="record-value">${nationalId}</span>
+                                    </div>
+                                    <div class="record-item">
+                                        <span class="record-label">اسم الأب:</span>
+                                        <span class="record-value">${fatherName}</span>
+                                    </div>
+                                    <div class="record-item">
+                                        <span class="record-label">اسم الأم:</span>
+                                        <span class="record-value">${motherName}</span>
+                                    </div>
+                                    <div class="record-item">
+                                        <span class="record-label">الحالة الاجتماعية:</span>
+                                        <span class="record-value">${isMarried ? 'متزوج' : 'أعزب'}</span>
+                                    </div>
+                                    ${isMarried ? `
+                                    <div class="record-item">
+                                        <span class="record-label">عدد الأطفال:</span>
+                                        <span class="record-value">${childrenCount}</span>
+                                    </div>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                    recordsContainer.innerHTML = recordsHTML;
+                })
+                .catch((error) => {
+                    // إخفاء مؤشر التحميل
+                    loadingRecords.style.display = 'none';
+                    
+                    console.error("خطأ في تحميل التسجيلات:", error);
+                    recordsContainer.innerHTML = `
+                        <div class="no-records">
+                            <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 20px; color: var(--danger-color);"></i>
+                            <p>حدث خطأ في تحميل التسجيلات</p>
+                            <p style="font-size: 0.9rem; margin-top: 10px;">${error.message}</p>
+                        </div>
+                    `;
+                });
+        }
+        
+        // بدء التسجيل
+        function startRegistration() {
+            welcomeScreen.style.display = 'none';
+            registrationScreen.style.display = 'block';
+            currentStep = 1;
+            updateProgressBar();
+        }
+        
+        // الانتقال بين الخطوات
+        function goToStep(step) {
+            // التحقق من صحة الخطوة الحالية قبل الانتقال
+            if (!validateCurrentStep()) {
+                return;
+            }
+            
+            // تحديث الخطوة الحالية
+            currentStep = step;
+            
+            // تحديث واجهة المستخدم
+            updateFormSteps();
+            updateProgressBar();
+            updateStepTitle();
+        }
+        
+        // التحقق من صحة الخطوة الحالية
+        function validateCurrentStep() {
+            let isValid = true;
+            
+            // إخفاء جميع التحذيرات أولاً
+            document.querySelectorAll('.warning').forEach(warning => {
+                warning.style.display = 'none';
+            });
+            
+            // التحقق بناءً على الخطوة الحالية
+            if (currentStep === 1) {
+                // التحقق من الاسم
+                if (!document.getElementById('firstName').value.trim()) {
+                    document.getElementById('firstName-warning').style.display = 'block';
+                    isValid = false;
+                }
+                
+                // التحقق من اللقب
+                if (!document.getElementById('lastName').value.trim()) {
+                    document.getElementById('lastName-warning').style.display = 'block';
+                    isValid = false;
+                }
+                
+                // التحقق من تاريخ الميلاد
+                if (!document.getElementById('birthDate').value) {
+                    document.getElementById('birthDate-warning').style.display = 'block';
+                    isValid = false;
+                }
+                
+                // التحقق من العمر
+                const age = document.getElementById('age').value;
+                if (!age || age < 1 || age > 120) {
+                    document.getElementById('age-warning').style.display = 'block';
+                    isValid = false;
+                }
+            } else if (currentStep === 2) {
+                // التحقق من المهنة
+                if (!document.getElementById('profession').value.trim()) {
+                    document.getElementById('profession-warning').style.display = 'block';
+                    isValid = false;
+                }
+                
+                // التحقق من رقم الهاتف
+                if (!document.getElementById('phone').value.trim()) {
+                    document.getElementById('phone-warning').style.display = 'block';
+                    isValid = false;
+                }
+                
+                // التحقق من البريد الإلكتروني
+                const email = document.getElementById('email').value;
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email || !emailRegex.test(email)) {
+                    document.getElementById('email-warning').style.display = 'block';
+                    isValid = false;
+                }
+                
+                // التحقق من رقم التعريف الوطني
+                if (!document.getElementById('nationalId').value.trim()) {
+                    document.getElementById('nationalId-warning').style.display = 'block';
+                    isValid = false;
+                }
+            } else if (currentStep === 3) {
+                // التحقق من اسم الأب
+                if (!document.getElementById('fatherName').value.trim()) {
+                    document.getElementById('fatherName-warning').style.display = 'block';
+                    isValid = false;
+                }
+                
+                // التحقق من اسم الأم
+                if (!document.getElementById('motherName').value.trim()) {
+                    document.getElementById('motherName-warning').style.display = 'block';
+                    isValid = false;
+                }
+            }
+            
+            return isValid;
+        }
+        
+        // تحديث خطوات النموذج
+        function updateFormSteps() {
+            formSteps.forEach(step => {
+                step.classList.remove('active');
+            });
+            
+            document.getElementById(`step-${currentStep}`).classList.add('active');
+        }
+        
+        // تحديث شريط التقدم
+        function updateProgressBar() {
+            // تحديث الدوائر
+            stepCircles.forEach((circle, index) => {
+                const stepNumber = index + 1;
+                
+                circle.classList.remove('active', 'completed');
+                
+                if (stepNumber < currentStep) {
+                    circle.classList.add('completed');
+                } else if (stepNumber === currentStep) {
+                    circle.classList.add('active');
+                }
+            });
+            
+            // تحديث النصوص
+            stepLabels.forEach((label, index) => {
+                const stepNumber = index + 1;
+                
+                label.classList.remove('active', 'completed');
+                
+                if (stepNumber < currentStep) {
+                    label.classList.add('completed');
+                } else if (stepNumber === currentStep) {
+                    label.classList.add('active');
+                }
+            });
+            
+            // تحديث الخط المتصل
+            const progressPercent = ((currentStep - 1) / (progressSteps.length - 1)) * 100;
+            progressConnector.style.width = `${progressPercent}%`;
+        }
+        
+        // تحديث عنوان الخطوة
+        function updateStepTitle() {
+            const titles = {
+                1: 'المعلومات الأساسية',
+                2: 'المعلومات الشخصية',
+                3: 'المعلومات الإضافية',
+                4: 'تأكيد التسجيل'
+            };
+            
+            stepTitle.textContent = titles[currentStep];
+        }
+        
+        // تبديل حقل الأطفال
+        function toggleChildrenField() {
+            const isMarried = document.getElementById('isMarried').checked;
+            const childrenField = document.getElementById('children-field');
+            
+            if (isMarried) {
+                childrenField.style.display = 'block';
+            } else {
+                childrenField.style.display = 'none';
+                document.getElementById('childrenCount').value = '';
+            }
+        }
+        
+        // تقديم النموذج - استبدال localStorage بـ Firebase
+        function submitForm(e) {
+            e.preventDefault();
+            
+            // التحقق النهائي من جميع الحقول
+            if (!validateAllFields()) {
+                return;
+            }
+            
+            // جمع البيانات
+            const formData = {};
+            
+            inputFields.forEach(field => {
+                if (field.type !== 'button' && field.type !== 'submit') {
+                    if (field.type === 'checkbox') {
+                        formData[field.name] = field.checked;
+                    } else {
+                        formData[field.name] = field.value;
+                    }
+                }
+            });
+            
+            // إضافة الطابع الزمني
+            formData.timestamp = firebase.firestore.FieldValue.serverTimestamp();
+            
+            // استبدال localStorage بـ Firebase Firestore
+            db.collection('registrations').add(formData)
+                .then((docRef) => {
+                    console.log("تم حفظ التسجيل بنجاح في Firebase مع المعرف:", docRef.id);
+                    
+                    // الانتقال إلى شاشة النجاح
+                    registrationScreen.style.display = 'none';
+                    successScreen.style.display = 'block';
+                    
+                    // مسح النموذج
+                    document.getElementById('registration-form').reset();
+                    currentStep = 1;
+                    updateFormSteps();
+                    updateProgressBar();
+                    updateStepTitle();
+                    toggleChildrenField();
+                })
+                .catch((error) => {
+                    console.error("خطأ في حفظ التسجيل في Firebase:", error);
+                    
+                    // عرض رسالة خطأ للمستخدم
+                    alert("حدث خطأ في حفظ البيانات. يرجى المحاولة مرة أخرى.");
+                });
+        }
+        
+        // التحقق من جميع الحقول
+        function validateAllFields() {
+            let isValid = true;
+            
+            // إخفاء جميع التحذيرات أولاً
+            document.querySelectorAll('.warning').forEach(warning => {
+                warning.style.display = 'none';
+            });
+            
+            // التحقق من جميع الحقول المطلوبة
+            const requiredFields = [
+                { id: 'firstName', warning: 'firstName-warning' },
+                { id: 'lastName', warning: 'lastName-warning' },
+                { id: 'birthDate', warning: 'birthDate-warning' },
+                { id: 'age', warning: 'age-warning' },
+                { id: 'profession', warning: 'profession-warning' },
+                { id: 'phone', warning: 'phone-warning' },
+                { id: 'email', warning: 'email-warning' },
+                { id: 'nationalId', warning: 'nationalId-warning' },
+                { id: 'fatherName', warning: 'fatherName-warning' },
+                { id: 'motherName', warning: 'motherName-warning' }
+            ];
+            
+            requiredFields.forEach(field => {
+                const inputElement = document.getElementById(field.id);
+                const warningElement = document.getElementById(field.warning);
+                
+                if (!inputElement.value.trim()) {
+                    warningElement.style.display = 'block';
+                    isValid = false;
+                }
+            });
+            
+            // التحقق من صحة البريد الإلكتروني
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (email && !emailRegex.test(email)) {
+                document.getElementById('email-warning').style.display = 'block';
+                isValid = false;
+            }
+            
+            // التحقق من صحة العمر
+            const age = document.getElementById('age').value;
+            
+            if (age && (age < 1 || age > 120)) {
+                document.getElementById('age-warning').style.display = 'block';
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        // العودة للصفحة الرئيسية
+        function goBackToHome() {
+            registrationScreen.style.display = 'none';
+            successScreen.style.display = 'none';
+            controlScreen.style.display = 'none';
+            recordsScreen.style.display = 'none';
+            welcomeScreen.style.display = 'flex';
+        }
+        
+        // بدء تسجيل جديد
+        function startNewRegistration() {
+            // مسح النموذج
+            document.getElementById('registration-form').reset();
+            
+            // العودة للخطوة الأولى
+            currentStep = 1;
+            updateFormSteps();
+            updateProgressBar();
+            updateStepTitle();
+            
+            // الانتقال لواجهة التسجيل
+            successScreen.style.display = 'none';
+            registrationScreen.style.display = 'block';
+            
+            // إعادة تعيين حقل الأطفال
+            toggleChildrenField();
+        }
+        
+        // حفظ الإعدادات (يبقى في localStorage لأنها إعدادات محلية)
+        function saveSettings() {
+            const settings = {
+                darkTheme: document.body.classList.contains('dark-theme')
+            };
+            
+            localStorage.setItem('appSettings', JSON.stringify(settings));
+        }
+        
+        // تحميل الإعدادات المحفوظة (يبقى في localStorage لأنها إعدادات محلية)
+        function loadSavedSettings() {
+            const savedSettings = localStorage.getItem('appSettings');
+            
+            if (savedSettings) {
+                const settings = JSON.parse(savedSettings);
+                
+                // تطبيق الثيم
+                if (settings.darkTheme) {
+                    document.body.classList.add('dark-theme');
+                    themeIcon.className = 'fas fa-sun theme-icon';
+                    themeText.textContent = 'الوضع النهاري';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
