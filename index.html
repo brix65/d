@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> "🏆 فرصة لتصبح المدير الجديد!" </title>
+    <title>"🏆 فرصة لتصبح المدير الجديد!"
+</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* إعدادات عامة */
@@ -111,30 +112,6 @@
             height: 8px;
             background-color: var(--primary-color);
             border-radius: 50%;
-        }
-        
-        /* حالة الاتصال */
-        .connection-status {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 15px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            background: var(--card-bg);
-            box-shadow: 0 2px 5px var(--shadow-color);
-        }
-        
-        .status-indicator {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #2ecc71;
-            animation: pulse 2s infinite;
-        }
-        
-        .status-indicator.offline {
-            background-color: #e74c3c;
         }
         
         /* تصميم الواجهة الأولى */
@@ -521,12 +498,6 @@
             to { transform: translateY(-10px); }
         }
         
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.7; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        
         /* تحسين شريط التقدم */
         .progress-connector {
             position: absolute;
@@ -681,28 +652,6 @@
         .back-home-btn:hover {
             background-color: #e67e22;
         }
-        
-        /* مؤشر التحميل */
-        .loading {
-            display: none;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .loader {
-            border: 4px solid var(--border-color);
-            border-top: 4px solid var(--primary-color);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 15px;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body>
@@ -714,12 +663,6 @@
                 <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="dot"></div>
-            </div>
-            
-            <!-- حالة الاتصال -->
-            <div class="connection-status" id="connection-status">
-                <div class="status-indicator" id="status-indicator"></div>
-                <span id="status-text">جاري الاتصال...</span>
             </div>
             
             <!-- تبديل الثيم -->
@@ -734,14 +677,17 @@
             <div class="logo">
                 <i class="fas fa-user-check"></i>
             </div>
-            <h1 class="welcome-title">"🏆 فرصة لتصبح المدير الجديد!"</h1>
+            <h1 class="welcome-title">"🏆 فرصة لتصبح المدير الجديد!"
+</h1>
             <p class="welcome-subtitle">
-📢 بما أن المزحات الإفراطية من المدير لطفي عبد الوهاب  أصبحت كثيرة، نوفر لكم الآن نظام تسجيل إلكتروني لاختيار المدير الجديد . وسيتم اختيار المدير القادم عن طريق القرعة… فمن يدري، ربما تكون/ي الفائز/ة! 🏆📝✨            </p>
+📢 بما أن المزحات الإفراطية من المدير لطفي عبد الوهاب أصبحت كثيرة، نوفر لكم الآن نظام تسجيل إلكتروني لاختيار المدير الجديد . وسيتم اختيار المدير القادم عن طريق القرعة… فمن يدري، ربما تكون/ي الفائز/ة! 🏆📝✨
+
+            </p>
             <button class="start-btn" id="start-button">
                 <i class="fas fa-share-alt"></i> ابدأ عملية التسجيل
             </button>
             <div class="copyright">
-                © 2025 نظام التسجيل الإلكتروني المتقدم. جميع الحقوق محفوظة.
+                © 2025 نظام التسجيل الإلكتروني. جميع الحقوق محفوظة.
             </div>
         </div>
         
@@ -900,7 +846,7 @@
                         
                         <div style="background-color: var(--bg-color); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
                             <p style="text-align: center; color: var(--text-color); line-height: 1.6;">
-                                سيتم حفظ جميع معلوماتك في قاعدة البيانات السحابية وسنتواصل معك في أقرب وقت.
+                                سيتم حفظ جميع معلوماتك في نظامنا وسنتواصل معك في أقرب وقت.
                             </p>
                         </div>
                     </div>
@@ -931,8 +877,6 @@
             <p class="success-message">
                 شكرًا لك على إكمال عملية التسجيل بنجاح.
                 <br><br>
-                <strong>تم حفظ بياناتك في السحابة الإلكترونية بنجاح.</strong>
-                <br>
                 <strong>سنقوم بالاتصال بك في أقرب وقت.</strong>
             </p>
             <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 20px;">
@@ -983,12 +927,7 @@
         
         <!-- واجهة عرض التسجيلات -->
         <div id="records-screen">
-            <h2 class="records-title">سجل التسجيلات - أونلاين</h2>
-            
-            <div class="loading" id="loading-records">
-                <div class="loader"></div>
-                <p>جاري تحميل التسجيلات من قاعدة البيانات...</p>
-            </div>
+            <h2 class="records-title">سجل التسجيلات</h2>
             
             <div class="records-container" id="records-container">
                 <!-- سيتم عرض التسجيلات هنا ديناميكيًا -->
@@ -1014,31 +953,26 @@
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    
+
     <script>
-        // **********************************************
-        // كود تهيئة Firebase
-        // **********************************************
+        // تهيئة Firebase
         const firebaseConfig = {
-            apiKey: "AIzaSyBidR3LH-Yd8P2l0x-enMbPoaAWXLc8HkY",
-            authDomain: "news-f3f5f.firebaseapp.com",
-            projectId: "news-f3f5f",
-            storageBucket: "news-f3f5f.firebasestorage.app",
-            messagingSenderId: "65555743080",
-            appId: "1:65555743080:web:7dc63389464c5ae93416dd",
-            measurementId: "G-S87EQYXE6C"
+            apiKey: "AIzaSyC91IZelDtX3qf2InDFt7MMLamYrCBH0Yo",
+            authDomain: "moudir-67596.firebaseapp.com",
+            projectId: "moudir-67596",
+            storageBucket: "moudir-67596.firebasestorage.app",
+            messagingSenderId: "25298966640",
+            appId: "1:25298966640:web:ddcc0e56989fa279197cb5",
+            measurementId: "G-9C0G7M4ENT"
         };
-        
+
         // تهيئة Firebase
         firebase.initializeApp(firebaseConfig);
-        
-        // تهيئة Firestore
         const db = firebase.firestore();
-        
-        // **********************************************
-        // كود JavaScript الرئيسي المعدل لاستخدام Firebase
-        // **********************************************
-        
+
+        // كلمة المرور للوحة التحكم (نفس القديمة)
+        const CONTROL_PASSWORD = "ghedir38";
+
         // عناصر DOM الرئيسية
         const welcomeScreen = document.getElementById('welcome-screen');
         const registrationScreen = document.getElementById('registration-screen');
@@ -1046,18 +980,13 @@
         const controlScreen = document.getElementById('control-screen');
         const recordsScreen = document.getElementById('records-screen');
         
-        // عناصر حالة الاتصال
-        const connectionStatus = document.getElementById('connection-status');
-        const statusIndicator = document.getElementById('status-indicator');
-        const statusText = document.getElementById('status-text');
-        
         // عناصر التحكم
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const themeText = document.getElementById('theme-text');
         const menuDots = document.getElementById('menu-dots');
         
-        // شريط التقدم متعدد المراحل
+        // شريط التقدم
         const progressSteps = document.querySelectorAll('.progress-step');
         const stepCircles = document.querySelectorAll('.step-circle');
         const stepLabels = document.querySelectorAll('.step-label');
@@ -1071,13 +1000,12 @@
         // جميع حقول الإدخال
         const inputFields = document.querySelectorAll('input, select');
         
-        // الأزرار الرئيسية
+        // الأزرار
         const startButton = document.getElementById('start-button');
         const backButton = document.getElementById('back-button');
         const newRegistrationButton = document.getElementById('new-registration');
         const backToHomeButton = document.getElementById('back-to-home');
         
-        // زر الانتقال بين الخطوات
         const nextStepButtons = {
             step1: document.getElementById('next-step-1'),
             step2: document.getElementById('next-step-2'),
@@ -1090,7 +1018,6 @@
             step4: document.getElementById('prev-step-4')
         };
         
-        // أزرار العودة
         const backHomeButtons = {
             fromRegistration: document.getElementById('back-home-from-registration'),
             fromSuccess: document.getElementById('back-home-from-success'),
@@ -1098,142 +1025,70 @@
             fromRecords: document.getElementById('back-home-from-records')
         };
         
-        // عناصر التحكم
+        // لوحة التحكم
         const passwordInput = document.getElementById('password-input');
         const passwordError = document.getElementById('password-error');
         const submitPasswordButton = document.getElementById('submit-password');
         const backFromControlButton = document.getElementById('back-from-control');
         const backFromRecordsButton = document.getElementById('back-from-records');
         const refreshRecordsButton = document.getElementById('refresh-records');
-        
-        // مؤشر التحميل
-        const loadingRecords = document.getElementById('loading-records');
-        
-        // كلمة المرور للتحكم
-        const CONTROL_PASSWORD = "ghedir38";
-        
-        // تهيئة الموقع
+
+        // تهيئة التطبيق
         window.addEventListener('DOMContentLoaded', () => {
-            // تحميل الإعدادات المحفوظة
             loadSavedSettings();
-            
-            // تحديث شريط التقدم
             updateProgressBar();
-            
-            // تحديث حالة الزواج
             toggleChildrenField();
-            
-            // إضافة مستمعي الأحداث
             setupEventListeners();
-            
-            // مراقبة حالة اتصال Firebase
-            monitorConnectionStatus();
+
+            // تحميل السجلات فوراً عند فتح لوحة التحكم (لكن ليس هنا لأنها محمية بكلمة مرور)
         });
-        
-        // مراقبة حالة اتصال Firebase
-        function monitorConnectionStatus() {
-            // مراقبة حالة الاتصال
-            db.enableNetwork().then(() => {
-                updateConnectionStatus(true);
-            }).catch((error) => {
-                updateConnectionStatus(false);
-                console.error("خطأ في الاتصال بقاعدة البيانات:", error);
-            });
-            
-            // مراقبة تغييرات حالة الاتصال في الوقت الحقيقي
-            db.collection('registrations').onSnapshot(
-                (snapshot) => {
-                    updateConnectionStatus(true);
-                },
-                (error) => {
-                    updateConnectionStatus(false);
-                    console.error("خطأ في مراقبة قاعدة البيانات:", error);
-                }
-            );
-        }
-        
-        // تحديث حالة الاتصال
-        function updateConnectionStatus(isConnected) {
-            if (isConnected) {
-                statusIndicator.className = 'status-indicator';
-                statusText.textContent = 'متصل ';
-                connectionStatus.style.color = '#2ecc71';
-            } else {
-                statusIndicator.className = 'status-indicator offline';
-                statusText.textContent = 'غير متصل';
-                connectionStatus.style.color = '#e74c3c';
-            }
-        }
-        
-        // إعداد مستمعي الأحداث
+
         function setupEventListeners() {
-            // تبديل الثيم
             themeToggle.addEventListener('click', toggleTheme);
-            
-            // النقاط الثلاثة للتحكم
             menuDots.addEventListener('click', openControlPanel);
-            
-            // بدء التسجيل
             startButton.addEventListener('click', startRegistration);
-            
-            // العودة للرئيسية
             backButton.addEventListener('click', goBackToHome);
             backToHomeButton.addEventListener('click', goBackToHome);
-            
-            // تسجيل جديد
             newRegistrationButton.addEventListener('click', startNewRegistration);
-            
-            // الانتقال بين الخطوات
+
             nextStepButtons.step1.addEventListener('click', () => goToStep(2));
             nextStepButtons.step2.addEventListener('click', () => goToStep(3));
             nextStepButtons.step3.addEventListener('click', () => goToStep(4));
-            
+
             prevStepButtons.step2.addEventListener('click', () => goToStep(1));
             prevStepButtons.step3.addEventListener('click', () => goToStep(2));
             prevStepButtons.step4.addEventListener('click', () => goToStep(3));
-            
-            // حقل الزواج
+
             document.getElementById('isMarried').addEventListener('change', toggleChildrenField);
-            
-            // تقديم النموذج
+
+            inputFields.forEach(field => {
+                field.addEventListener('input', saveFormDataLocally); // حفظ مؤقت محلي فقط للجلسة الحالية
+            });
+
             document.getElementById('registration-form').addEventListener('submit', submitForm);
-            
-            // أزرار العودة للرئيسية
-            backHomeButtons.fromRegistration.addEventListener('click', goBackToHome);
-            backHomeButtons.fromSuccess.addEventListener('click', goBackToHome);
-            backHomeButtons.fromControl.addEventListener('click', goBackToHome);
-            backHomeButtons.fromRecords.addEventListener('click', goBackToHome);
-            
+
+            // أزرار العودة
+            Object.values(backHomeButtons).forEach(btn => btn.addEventListener('click', goBackToHome));
+
             // لوحة التحكم
             submitPasswordButton.addEventListener('click', checkPassword);
-            passwordInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    checkPassword();
-                }
-            });
-            
+            passwordInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') checkPassword(); });
             backFromControlButton.addEventListener('click', () => {
                 controlScreen.style.display = 'none';
                 welcomeScreen.style.display = 'flex';
                 passwordInput.value = '';
                 passwordError.style.display = 'none';
             });
-            
-            // سجل التسجيلات
             backFromRecordsButton.addEventListener('click', () => {
                 recordsScreen.style.display = 'none';
                 controlScreen.style.display = 'block';
-                passwordInput.value = '';
             });
-            
-            refreshRecordsButton.addEventListener('click', loadAllRecordsFromFirebase);
+            refreshRecordsButton.addEventListener('click', loadAllRecords);
         }
-        
-        // تبديل الثيم (فاتح/غامق)
+
+        // تبديل الثيم
         function toggleTheme() {
             document.body.classList.toggle('dark-theme');
-            
-            // تحديث الأيقونة والنص
             if (document.body.classList.contains('dark-theme')) {
                 themeIcon.className = 'fas fa-sun theme-icon';
                 themeText.textContent = 'الوضع النهاري';
@@ -1241,11 +1096,9 @@
                 themeIcon.className = 'fas fa-moon theme-icon';
                 themeText.textContent = 'الوضع الليلي';
             }
-            
-            // حفظ الإعداد
             saveSettings();
         }
-        
+
         // فتح لوحة التحكم
         function openControlPanel() {
             welcomeScreen.style.display = 'none';
@@ -1255,284 +1108,149 @@
             controlScreen.style.display = 'block';
             passwordInput.value = '';
             passwordError.style.display = 'none';
+            passwordInput.focus();
         }
-        
+
         // التحقق من كلمة المرور
         function checkPassword() {
-            const password = passwordInput.value.trim();
-            
-            if (password === CONTROL_PASSWORD) {
-                // كلمة المرور صحيحة
+            if (passwordInput.value.trim() === CONTROL_PASSWORD) {
                 controlScreen.style.display = 'none';
                 recordsScreen.style.display = 'block';
-                loadAllRecordsFromFirebase();
+                loadAllRecords();
                 passwordError.style.display = 'none';
             } else {
-                // كلمة المرور خاطئة
                 passwordError.style.display = 'block';
                 passwordInput.value = '';
                 passwordInput.focus();
             }
         }
-        
-        // تحميل جميع التسجيلات من Firebase
-        function loadAllRecordsFromFirebase() {
+
+        // تحميل جميع السجلات من Firestore مع Real-time Listener
+        function loadAllRecords() {
             const recordsContainer = document.getElementById('records-container');
-            
-            // إظهار مؤشر التحميل
-            loadingRecords.style.display = 'block';
-            recordsContainer.innerHTML = '';
-            
-            // استبدال localStorage بـ Firebase Firestore
-            db.collection('registrations').orderBy('timestamp', 'desc').get()
-                .then((querySnapshot) => {
-                    // إخفاء مؤشر التحميل
-                    loadingRecords.style.display = 'none';
-                    
-                    if (querySnapshot.empty) {
-                        recordsContainer.innerHTML = `
-                            <div class="no-records">
-                                <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 20px; color: var(--text-light);"></i>
-                                <p>لا توجد تسجيلات حتى الآن</p>
-                            </div>
-                        `;
-                        return;
-                    }
-                    
-                    // عرض التسجيلات
-                    let recordsHTML = '';
-                    
-                    querySnapshot.forEach((doc) => {
-                        const record = doc.data();
-                        const date = record.timestamp ? new Date(record.timestamp.seconds * 1000).toLocaleString('ar-SA') : 'غير محدد';
-                        const fullName = `${record.firstName || ''} ${record.lastName || ''}`.trim() || 'غير معروف';
-                        const age = record.age || 'غير محدد';
-                        const birthDate = record.birthDate || 'غير محدد';
-                        const profession = record.profession || 'غير محدد';
-                        const phone = record.phone || 'غير محدد';
-                        const email = record.email || 'غير محدد';
-                        const nationalId = record.nationalId || 'غير محدد';
-                        const fatherName = record.fatherName || 'غير محدد';
-                        const motherName = record.motherName || 'غير محدد';
-                        const isMarried = record.isMarried === true || record.isMarried === 'true';
-                        const childrenCount = record.childrenCount || '0';
-                        
-                        recordsHTML += `
-                            <div class="record-card">
-                                <div class="record-header">
-                                    <div class="record-name">${fullName}</div>
-                                    <div class="record-date">${date}</div>
-                                </div>
-                                <div class="record-details">
-                                    <div class="record-item">
-                                        <span class="record-label">العمر:</span>
-                                        <span class="record-value">${age} سنة</span>
-                                    </div>
-                                    <div class="record-item">
-                                        <span class="record-label">تاريخ الميلاد:</span>
-                                        <span class="record-value">${birthDate}</span>
-                                    </div>
-                                    <div class="record-item">
-                                        <span class="record-label">المهنة:</span>
-                                        <span class="record-value">${profession}</span>
-                                    </div>
-                                    <div class="record-item">
-                                        <span class="record-label">رقم الهاتف:</span>
-                                        <span class="record-value">${phone}</span>
-                                    </div>
-                                    <div class="record-item">
-                                        <span class="record-label">البريد الإلكتروني:</span>
-                                        <span class="record-value">${email}</span>
-                                    </div>
-                                    <div class="record-item">
-                                        <span class="record-label">رقم التعريف:</span>
-                                        <span class="record-value">${nationalId}</span>
-                                    </div>
-                                    <div class="record-item">
-                                        <span class="record-label">اسم الأب:</span>
-                                        <span class="record-value">${fatherName}</span>
-                                    </div>
-                                    <div class="record-item">
-                                        <span class="record-label">اسم الأم:</span>
-                                        <span class="record-value">${motherName}</span>
-                                    </div>
-                                    <div class="record-item">
-                                        <span class="record-label">الحالة الاجتماعية:</span>
-                                        <span class="record-value">${isMarried ? 'متزوج' : 'أعزب'}</span>
-                                    </div>
-                                    ${isMarried ? `
-                                    <div class="record-item">
-                                        <span class="record-label">عدد الأطفال:</span>
-                                        <span class="record-value">${childrenCount}</span>
-                                    </div>
-                                    ` : ''}
-                                </div>
-                            </div>
-                        `;
-                    });
-                    
-                    recordsContainer.innerHTML = recordsHTML;
-                })
-                .catch((error) => {
-                    // إخفاء مؤشر التحميل
-                    loadingRecords.style.display = 'none';
-                    
-                    console.error("خطأ في تحميل التسجيلات:", error);
+
+            db.collection('data').orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
+                if (snapshot.empty) {
                     recordsContainer.innerHTML = `
                         <div class="no-records">
-                            <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 20px; color: var(--danger-color);"></i>
-                            <p>حدث خطأ في تحميل التسجيلات</p>
-                            <p style="font-size: 0.9rem; margin-top: 10px;">${error.message}</p>
+                            <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 20px; color: var(--text-light);"></i>
+                            <p>لا توجد تسجيلات حتى الآن</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                let recordsHTML = '';
+                snapshot.forEach(doc => {
+                    const record = doc.data();
+                    const date = record.timestamp ? new Date(record.timestamp.toDate()).toLocaleString('ar-SA') : 'غير محدد';
+                    const fullName = `${record.firstName || ''} ${record.lastName || ''}`.trim() || 'غير معروف';
+                    const age = record.age || 'غير محدد';
+                    const birthDate = record.birthDate || 'غير محدد';
+                    const profession = record.profession || 'غير محدد';
+                    const phone = record.phone || 'غير محدد';
+                    const email = record.email || 'غير محدد';
+                    const nationalId = record.nationalId || 'غير محدد';
+                    const fatherName = record.fatherName || 'غير محدد';
+                    const motherName = record.motherName || 'غير محدد';
+                    const isMarried = record.isMarried || false;
+                    const childrenCount = record.childrenCount || '0';
+
+                    recordsHTML += `
+                        <div class="record-card">
+                            <div class="record-header">
+                                <div class="record-name">${fullName}</div>
+                                <div class="record-date">${date}</div>
+                            </div>
+                            <div class="record-details">
+                                <div class="record-item"><span class="record-label">العمر:</span> <span class="record-value">${age} سنة</span></div>
+                                <div class="record-item"><span class="record-label">تاريخ الميلاد:</span> <span class="record-value">${birthDate}</span></div>
+                                <div class="record-item"><span class="record-label">المهنة:</span> <span class="record-value">${profession}</span></div>
+                                <div class="record-item"><span class="record-label">رقم الهاتف:</span> <span class="record-value">${phone}</span></div>
+                                <div class="record-item"><span class="record-label">البريد الإلكتروني:</span> <span class="record-value">${email}</span></div>
+                                <div class="record-item"><span class="record-label">رقم التعريف:</span> <span class="record-value">${nationalId}</span></div>
+                                <div class="record-item"><span class="record-label">اسم الأب:</span> <span class="record-value">${fatherName}</span></div>
+                                <div class="record-item"><span class="record-label">اسم الأم:</span> <span class="record-value">${motherName}</span></div>
+                                <div class="record-item"><span class="record-label">الحالة الاجتماعية:</span> <span class="record-value">${isMarried ? 'متزوج' : 'أعزب'}</span></div>
+                                ${isMarried ? `<div class="record-item"><span class="record-label">عدد الأطفال:</span> <span class="record-value">${childrenCount}</span></div>` : ''}
+                            </div>
                         </div>
                     `;
                 });
+
+                recordsContainer.innerHTML = recordsHTML;
+            }, (error) => {
+                console.error("خطأ في تحميل السجلات:", error);
+                recordsContainer.innerHTML = `<p style="color:red; text-align:center;">خطأ في تحميل البيانات</p>`;
+            });
         }
-        
+
         // بدء التسجيل
         function startRegistration() {
             welcomeScreen.style.display = 'none';
             registrationScreen.style.display = 'block';
             currentStep = 1;
             updateProgressBar();
+            updateStepTitle();
+            updateFormSteps();
         }
-        
+
         // الانتقال بين الخطوات
         function goToStep(step) {
-            // التحقق من صحة الخطوة الحالية قبل الانتقال
-            if (!validateCurrentStep()) {
-                return;
-            }
-            
-            // تحديث الخطوة الحالية
+            if (!validateCurrentStep()) return;
             currentStep = step;
-            
-            // تحديث واجهة المستخدم
             updateFormSteps();
             updateProgressBar();
             updateStepTitle();
         }
-        
+
         // التحقق من صحة الخطوة الحالية
         function validateCurrentStep() {
             let isValid = true;
-            
-            // إخفاء جميع التحذيرات أولاً
-            document.querySelectorAll('.warning').forEach(warning => {
-                warning.style.display = 'none';
-            });
-            
-            // التحقق بناءً على الخطوة الحالية
+            document.querySelectorAll('.warning').forEach(w => w.style.display = 'none');
+
             if (currentStep === 1) {
-                // التحقق من الاسم
-                if (!document.getElementById('firstName').value.trim()) {
-                    document.getElementById('firstName-warning').style.display = 'block';
-                    isValid = false;
-                }
-                
-                // التحقق من اللقب
-                if (!document.getElementById('lastName').value.trim()) {
-                    document.getElementById('lastName-warning').style.display = 'block';
-                    isValid = false;
-                }
-                
-                // التحقق من تاريخ الميلاد
-                if (!document.getElementById('birthDate').value) {
-                    document.getElementById('birthDate-warning').style.display = 'block';
-                    isValid = false;
-                }
-                
-                // التحقق من العمر
+                if (!document.getElementById('firstName').value.trim()) { document.getElementById('firstName-warning').style.display = 'block'; isValid = false; }
+                if (!document.getElementById('lastName').value.trim()) { document.getElementById('lastName-warning').style.display = 'block'; isValid = false; }
+                if (!document.getElementById('birthDate').value) { document.getElementById('birthDate-warning').style.display = 'block'; isValid = false; }
                 const age = document.getElementById('age').value;
-                if (!age || age < 1 || age > 120) {
-                    document.getElementById('age-warning').style.display = 'block';
-                    isValid = false;
-                }
+                if (!age || age < 1 || age > 120) { document.getElementById('age-warning').style.display = 'block'; isValid = false; }
             } else if (currentStep === 2) {
-                // التحقق من المهنة
-                if (!document.getElementById('profession').value.trim()) {
-                    document.getElementById('profession-warning').style.display = 'block';
-                    isValid = false;
-                }
-                
-                // التحقق من رقم الهاتف
-                if (!document.getElementById('phone').value.trim()) {
-                    document.getElementById('phone-warning').style.display = 'block';
-                    isValid = false;
-                }
-                
-                // التحقق من البريد الإلكتروني
+                if (!document.getElementById('profession').value.trim()) { document.getElementById('profession-warning').style.display = 'block'; isValid = false; }
+                if (!document.getElementById('phone').value.trim()) { document.getElementById('phone-warning').style.display = 'block'; isValid = false; }
                 const email = document.getElementById('email').value;
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!email || !emailRegex.test(email)) {
-                    document.getElementById('email-warning').style.display = 'block';
-                    isValid = false;
-                }
-                
-                // التحقق من رقم التعريف الوطني
-                if (!document.getElementById('nationalId').value.trim()) {
-                    document.getElementById('nationalId-warning').style.display = 'block';
-                    isValid = false;
-                }
+                if (!email || !emailRegex.test(email)) { document.getElementById('email-warning').style.display = 'block'; isValid = false; }
+                if (!document.getElementById('nationalId').value.trim()) { document.getElementById('nationalId-warning').style.display = 'block'; isValid = false; }
             } else if (currentStep === 3) {
-                // التحقق من اسم الأب
-                if (!document.getElementById('fatherName').value.trim()) {
-                    document.getElementById('fatherName-warning').style.display = 'block';
-                    isValid = false;
-                }
-                
-                // التحقق من اسم الأم
-                if (!document.getElementById('motherName').value.trim()) {
-                    document.getElementById('motherName-warning').style.display = 'block';
-                    isValid = false;
-                }
+                if (!document.getElementById('fatherName').value.trim()) { document.getElementById('fatherName-warning').style.display = 'block'; isValid = false; }
+                if (!document.getElementById('motherName').value.trim()) { document.getElementById('motherName-warning').style.display = 'block'; isValid = false; }
             }
-            
             return isValid;
         }
-        
-        // تحديث خطوات النموذج
+
         function updateFormSteps() {
-            formSteps.forEach(step => {
-                step.classList.remove('active');
-            });
-            
+            formSteps.forEach(step => step.classList.remove('active'));
             document.getElementById(`step-${currentStep}`).classList.add('active');
         }
-        
-        // تحديث شريط التقدم
+
         function updateProgressBar() {
-            // تحديث الدوائر
-            stepCircles.forEach((circle, index) => {
-                const stepNumber = index + 1;
-                
+            stepCircles.forEach((circle, i) => {
+                const n = i + 1;
                 circle.classList.remove('active', 'completed');
-                
-                if (stepNumber < currentStep) {
-                    circle.classList.add('completed');
-                } else if (stepNumber === currentStep) {
-                    circle.classList.add('active');
-                }
+                if (n < currentStep) circle.classList.add('completed');
+                else if (n === currentStep) circle.classList.add('active');
             });
-            
-            // تحديث النصوص
-            stepLabels.forEach((label, index) => {
-                const stepNumber = index + 1;
-                
+            stepLabels.forEach((label, i) => {
+                const n = i + 1;
                 label.classList.remove('active', 'completed');
-                
-                if (stepNumber < currentStep) {
-                    label.classList.add('completed');
-                } else if (stepNumber === currentStep) {
-                    label.classList.add('active');
-                }
+                if (n < currentStep) label.classList.add('completed');
+                else if (n === currentStep) label.classList.add('active');
             });
-            
-            // تحديث الخط المتصل
-            const progressPercent = ((currentStep - 1) / (progressSteps.length - 1)) * 100;
-            progressConnector.style.width = `${progressPercent}%`;
+            const percent = ((currentStep - 1) / (progressSteps.length - 1)) * 100;
+            progressConnector.style.width = `${percent}%`;
         }
-        
-        // تحديث عنوان الخطوة
+
         function updateStepTitle() {
             const titles = {
                 1: 'المعلومات الأساسية',
@@ -1540,127 +1258,93 @@
                 3: 'المعلومات الإضافية',
                 4: 'تأكيد التسجيل'
             };
-            
             stepTitle.textContent = titles[currentStep];
         }
-        
-        // تبديل حقل الأطفال
+
         function toggleChildrenField() {
             const isMarried = document.getElementById('isMarried').checked;
-            const childrenField = document.getElementById('children-field');
-            
-            if (isMarried) {
-                childrenField.style.display = 'block';
-            } else {
-                childrenField.style.display = 'none';
-                document.getElementById('childrenCount').value = '';
+            const field = document.getElementById('children-field');
+            if (isMarried) field.style.display = 'block';
+            else { field.style.display = 'none'; document.getElementById('childrenCount').value = ''; }
+        }
+
+        // حفظ النموذج مؤقتاً في localStorage (للجلسة فقط، لأن Firestore لا نحفظ مسودة)
+        function saveFormDataLocally() {
+            const data = {};
+            inputFields.forEach(f => {
+                if (f.type === 'checkbox') data[f.name] = f.checked;
+                else data[f.name] = f.value;
+            });
+            localStorage.setItem('tempRegistrationData', JSON.stringify(data));
+        }
+
+        // تحميل البيانات المؤقتة عند بدء تسجيل جديد
+        function loadTempData() {
+            const saved = localStorage.getItem('tempRegistrationData');
+            if (saved) {
+                const data = JSON.parse(saved);
+                inputFields.forEach(f => {
+                    if (data[f.name] !== undefined) {
+                        if (f.type === 'checkbox') f.checked = data[f.name];
+                        else f.value = data[f.name];
+                    }
+                });
+                toggleChildrenField();
             }
         }
-        
-        // تقديم النموذج - استبدال localStorage بـ Firebase
+
+        // تقديم النموذج وحفظه في Firestore
         function submitForm(e) {
             e.preventDefault();
-            
-            // التحقق النهائي من جميع الحقول
-            if (!validateAllFields()) {
-                return;
-            }
-            
-            // جمع البيانات
+            if (!validateAllFields()) return;
+
             const formData = {};
-            
             inputFields.forEach(field => {
-                if (field.type !== 'button' && field.type !== 'submit') {
-                    if (field.type === 'checkbox') {
-                        formData[field.name] = field.checked;
-                    } else {
-                        formData[field.name] = field.value;
-                    }
-                }
+                if (field.type === 'checkbox') formData[field.name] = field.checked;
+                else formData[field.name] = field.value;
             });
-            
-            // إضافة الطابع الزمني
             formData.timestamp = firebase.firestore.FieldValue.serverTimestamp();
-            
-            // استبدال localStorage بـ Firebase Firestore
-            db.collection('registrations').add(formData)
-                .then((docRef) => {
-                    console.log("تم حفظ التسجيل بنجاح في Firebase مع المعرف:", docRef.id);
-                    
-                    // الانتقال إلى شاشة النجاح
+
+            db.collection('data').add(formData)
+                .then(() => {
                     registrationScreen.style.display = 'none';
                     successScreen.style.display = 'block';
-                    
-                    // مسح النموذج
+                    localStorage.removeItem('tempRegistrationData');
                     document.getElementById('registration-form').reset();
-                    currentStep = 1;
-                    updateFormSteps();
-                    updateProgressBar();
-                    updateStepTitle();
-                    toggleChildrenField();
                 })
-                .catch((error) => {
-                    console.error("خطأ في حفظ التسجيل في Firebase:", error);
-                    
-                    // عرض رسالة خطأ للمستخدم
-                    alert("حدث خطأ في حفظ البيانات. يرجى المحاولة مرة أخرى.");
+                .catch(error => {
+                    console.error("خطأ في حفظ البيانات:", error);
+                    alert("حدث خطأ أثناء حفظ البيانات. تحقق من الاتصال بالإنترنت.");
                 });
         }
-        
-        // التحقق من جميع الحقول
+
         function validateAllFields() {
-            let isValid = true;
-            
-            // إخفاء جميع التحذيرات أولاً
-            document.querySelectorAll('.warning').forEach(warning => {
-                warning.style.display = 'none';
-            });
-            
-            // التحقق من جميع الحقول المطلوبة
-            const requiredFields = [
-                { id: 'firstName', warning: 'firstName-warning' },
-                { id: 'lastName', warning: 'lastName-warning' },
-                { id: 'birthDate', warning: 'birthDate-warning' },
-                { id: 'age', warning: 'age-warning' },
-                { id: 'profession', warning: 'profession-warning' },
-                { id: 'phone', warning: 'phone-warning' },
-                { id: 'email', warning: 'email-warning' },
-                { id: 'nationalId', warning: 'nationalId-warning' },
-                { id: 'fatherName', warning: 'fatherName-warning' },
-                { id: 'motherName', warning: 'motherName-warning' }
-            ];
-            
-            requiredFields.forEach(field => {
-                const inputElement = document.getElementById(field.id);
-                const warningElement = document.getElementById(field.warning);
-                
-                if (!inputElement.value.trim()) {
-                    warningElement.style.display = 'block';
-                    isValid = false;
+            let valid = true;
+            document.querySelectorAll('.warning').forEach(w => w.style.display = 'none');
+
+            ['firstName','lastName','birthDate','age','profession','phone','email','nationalId','fatherName','motherName'].forEach(id => {
+                const el = document.getElementById(id);
+                if (!el.value.trim()) {
+                    document.getElementById(id + '-warning').style.display = 'block';
+                    valid = false;
                 }
             });
-            
-            // التحقق من صحة البريد الإلكتروني
+
             const email = document.getElementById('email').value;
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
-            if (email && !emailRegex.test(email)) {
+            if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
                 document.getElementById('email-warning').style.display = 'block';
-                isValid = false;
+                valid = false;
             }
-            
-            // التحقق من صحة العمر
+
             const age = document.getElementById('age').value;
-            
             if (age && (age < 1 || age > 120)) {
                 document.getElementById('age-warning').style.display = 'block';
-                isValid = false;
+                valid = false;
             }
-            
-            return isValid;
+
+            return valid;
         }
-        
-        // العودة للصفحة الرئيسية
+
         function goBackToHome() {
             registrationScreen.style.display = 'none';
             successScreen.style.display = 'none';
@@ -1668,44 +1352,29 @@
             recordsScreen.style.display = 'none';
             welcomeScreen.style.display = 'flex';
         }
-        
-        // بدء تسجيل جديد
+
         function startNewRegistration() {
-            // مسح النموذج
             document.getElementById('registration-form').reset();
-            
-            // العودة للخطوة الأولى
             currentStep = 1;
             updateFormSteps();
             updateProgressBar();
             updateStepTitle();
-            
-            // الانتقال لواجهة التسجيل
+            toggleChildrenField();
+            loadTempData(); // استعادة أي بيانات مؤقتة
             successScreen.style.display = 'none';
             registrationScreen.style.display = 'block';
-            
-            // إعادة تعيين حقل الأطفال
-            toggleChildrenField();
         }
-        
-        // حفظ الإعدادات (يبقى في localStorage لأنها إعدادات محلية)
+
         function saveSettings() {
-            const settings = {
-                darkTheme: document.body.classList.contains('dark-theme')
-            };
-            
+            const settings = { darkTheme: document.body.classList.contains('dark-theme') };
             localStorage.setItem('appSettings', JSON.stringify(settings));
         }
-        
-        // تحميل الإعدادات المحفوظة (يبقى في localStorage لأنها إعدادات محلية)
+
         function loadSavedSettings() {
-            const savedSettings = localStorage.getItem('appSettings');
-            
-            if (savedSettings) {
-                const settings = JSON.parse(savedSettings);
-                
-                // تطبيق الثيم
-                if (settings.darkTheme) {
+            const saved = localStorage.getItem('appSettings');
+            if (saved) {
+                const s = JSON.parse(saved);
+                if (s.darkTheme) {
                     document.body.classList.add('dark-theme');
                     themeIcon.className = 'fas fa-sun theme-icon';
                     themeText.textContent = 'الوضع النهاري';
